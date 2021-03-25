@@ -6,8 +6,9 @@ using System.Web;
 
 namespace car_rental.Models
 {
-    public class Cars
+    public class Car
     {
+        [Key]
         [Required(ErrorMessage = "Input car ID")]
         public int CarsID { get; set; }
 
@@ -23,6 +24,6 @@ namespace car_rental.Models
         public decimal Price { get; set; }
         public DateTime AddDate { get; set; }
         public int CategoryID { get; set; }
-        public virtual Categories Category { get; set; }
+        public virtual Category Category { get; set; }
     }
 }

@@ -6,11 +6,11 @@ using System.Web;
 
 namespace car_rental.Models
 {
-    public class Categories
+    public class Category
     {
-        public ICollection<Cars> Cars { get; set; }
+        public ICollection<Car> Cars { get; set; }
 
-        [Required(ErrorMessage = "Input category ID")]
+        [Key]
         public int CategoryID { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }

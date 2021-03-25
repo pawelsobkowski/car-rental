@@ -9,7 +9,11 @@ namespace car_rental.DAL
 {
     public class CarsContext : DbContext
     {
-        public DbSet<Cars> Cars { get; set; }
-        public DbSet<Categories> Categories { get; set; }
+        public DbSet<Car> Cars { get; set; }
+        public DbSet<Category> Categories { get; set; }
+        public CarsContext() : base("CarsContext")
+        {
+
+        }
     }
 }
